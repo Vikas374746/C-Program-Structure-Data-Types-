@@ -1,61 +1,54 @@
-Expt 2 - C++ Program Structure (Data Types)
+Expt 2 – C++ Program Structure (Data Types)
+Title of the Experiment
+Program to input and display values of various C++ data types and print their memory size using sizeof().
 
-Aim: To studyand implementC++ Program Structure (Data Types)
-Theory:
-C++ Data Types
-Primitive Built-in Types
-Type	Keyword
-Boolean	bool
-Character	char
-Integer	int
-Floating point	float
-Double floating point	double
-Valueless	void
-Wide character	wchar_t
+Tools Used
+Programming Language: C++
 
-Type	Typical Bit Width	Typical Range
-char	1byte	-127 to 127 or 0 to 255
-unsigned char	1byte	0 to 255
-signed char	1byte	-127 to 127
-int	4bytes	-2147483648 to 2147483647
-unsigned int	4bytes	0 to 4294967295
-signed int	4bytes	-2147483648 to 2147483647
-short int	2bytes	-32768 to 32767
-unsigned short int	2bytes	0 to 65,535
-signed short int	2bytes	-32768 to 32767
-long int	8bytes	-9223372036854775808 to 9223372036854775807
-signed long int	8bytes	same as long int
-unsigned long int	8bytes	0 to 18446744073709551615
-long long int	8bytes	-(2^63) to (2^63)-1
-unsigned long long int	8bytes	0 to 18,446,744,073,709,551,615
-float	4bytes	
-double	8bytes	
-long double	12bytes	
-wchar_t	2 or 4 bytes	1 wide character
+Compiler: g++ or any standard C++ compiler
 
+IDE: Code::Blocks / VS Code / OnlineGDB
 
-Storage Classes in C++
-A storage class defines the scope (visibility) and life-time of variables and/or functions within a C++ Program. These specifiers precede the type that they modify. There are following storage classes, which can be used in a C++ Program
-•	auto
-•	register
-•	static
-•	extern
-•	mutable
-The auto Storage Class
-The auto storage class is the default storage class for all local variables.
-{
-   int mount;
-   auto int month;
-}
+Theory
+C++ supports various built-in data types such as:
 
-The register Storage Class
-The register storage class is used to define local variables that should be stored in a register instead of RAM. This means that the variable has a maximum size equal to the register size (usually one word) and can't have the unary '&' operator applied to it (as it does not have a memory location).
-{
-   register int  miles;
-}
-The static Storage Class
-The static storage class instructs the compiler to keep a local variable in existence during the life-time of the program instead of creating and destroying it each time it comes into and goes out of scope. Therefore, making local variables static allows them to maintain their values between function calls.
+int: Integer numbers
+
+float: Decimal numbers
+
+double: High-precision decimal numbers
+
+char: Single characters
+
+bool: True or False values
+
+string: Sequence of characters (from C++ STL)
+
+sizeof() Operator
+Used to determine the memory size of a variable or data type in bytes.
+
+Storage Classes
+auto: Default for local variables
+
+register: Suggests storing in CPU register
+
+static: Retains value between function calls
+
+extern: Refers to a global variable declared elsewhere
+
+Algorithm (Summarized):
+
+1. Start
+2. Declare variables: int, float, double, char, string, and bool
+3. Input values for all variables from the user
+4. Display each value along with its size using sizeof()
+5. Use cin.ignore() and getline() for string input
+6. Use boolalpha to display true/false instead of 1/0
+7. End
+
+Conclusion
+This experiment helps understand basic C++ data types, how memory is allocated to them, and how to use the sizeof() operator. It also introduces storage classes which control variable scope and lifetime.
 
 
-The extern Storage Class
-The extern storage class is used to give a reference of a global variable that is visible to ALL the program files. When you use 'extern' the variable cannot be initialized as all it does is point the variable name at a storage location that has been previously defined.
+
+
